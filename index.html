@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sentrell Group | AI Enablement for Government Teams</title>
+<meta name="description" content="Sentrell Group helps government teams put the AI tools they already have to work: safely, quickly, and on their real workflows. Based in Kansas City. Launching soon.">
+<meta property="og:title" content="Sentrell Group">
+<meta property="og:description" content="AI enablement for government teams. Kansas City based. Launching soon.">
+<meta property="og:url" content="https://sentrellgroup.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4ed8'/%3E%3Cpath d='M42 20c-3-3-7-4-11-4-7 0-12 4-12 9 0 12 25 7 25 17 0 5-5 8-12 8-5 0-9-2-12-5' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1d4ed8; --blue-deep:#0b2a7a; --blue-ink:#0a1f5c;
+    --white:#ffffff; --mist:#eef3ff; --slate:#475569;
+    --gold:#f2b632;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--blue-ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{position:absolute;inset:0 0 auto 0;z-index:5}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white);font-weight:800;letter-spacing:.14em;font-size:15px}
+  .mark{width:34px;height:34px;border-radius:8px;background:var(--white);display:grid;place-items:center}
+  .mark svg{width:22px;height:22px}
+  .nav a.cta-sm{color:var(--white);text-decoration:none;font-weight:600;font-size:14px;border:1px solid rgba(255,255,255,.45);padding:8px 16px;border-radius:999px;transition:.2s}
+  .nav a.cta-sm:hover{background:var(--white);color:var(--blue)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;color:var(--white);
+    background:radial-gradient(1200px 600px at 85% -10%,#3b6cf0 0%,transparent 60%),linear-gradient(160deg,var(--blue) 0%,var(--blue-deep) 100%);
+    padding:150px 0 110px}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:48px 48px;mask-image:linear-gradient(to bottom,#000 0%,transparent 85%)}
+  .hero .wrap{position:relative;z-index:1}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(242,182,50,.7);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(242,182,50,0)}100%{box-shadow:0 0 0 0 rgba(242,182,50,0)}}
+  h1{font-size:clamp(36px,6vw,64px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:22px 0 20px;max-width:820px}
+  h1 em{font-style:normal;color:var(--gold)}
+  .lead{font-size:clamp(17px,2vw,20px);max-width:640px;color:rgba(255,255,255,.88)}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:16px;padding:14px 26px;border-radius:10px;transition:transform .15s,box-shadow .15s}
+  .btn-gold{background:var(--gold);color:var(--blue-ink);box-shadow:0 8px 24px rgba(242,182,50,.35)}
+  .btn-gold:hover{transform:translateY(-2px)}
+  .btn-ghost{color:var(--white);border:1px solid rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* Services */
+  section{padding:90px 0}
+  .eyebrow{color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+  h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.015em;line-height:1.15;margin:10px 0 14px}
+  .sub{color:var(--slate);max-width:640px;font-size:18px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .card{background:var(--white);border:1px solid #dbe4fb;border-radius:16px;padding:30px;transition:.2s;position:relative}
+  .card:hover{border-color:var(--blue);box-shadow:0 14px 36px rgba(29,78,216,.12);transform:translateY(-3px)}
+  .card .num{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.1em}
+  .icon{width:48px;height:48px;border-radius:12px;background:var(--mist);display:grid;place-items:center;margin:14px 0 18px}
+  .icon svg{width:24px;height:24px;stroke:var(--blue)}
+  .card h3{font-size:20px;font-weight:700;margin-bottom:8px}
+  .card p{color:var(--slate);font-size:15.5px}
+
+  /* Why */
+  .why{background:var(--mist)}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .points{list-style:none;display:grid;gap:18px}
+  .points li{display:flex;gap:14px;align-items:flex-start;background:var(--white);padding:18px 20px;border-radius:12px;border-left:4px solid var(--gold)}
+  .points b{display:block;font-size:16px}
+  .points span{color:var(--slate);font-size:15px}
+
+  /* Contact */
+  .contact{background:linear-gradient(160deg,var(--blue) 0%,var(--blue-deep) 100%);color:var(--white);text-align:center}
+  .contact .eyebrow{color:var(--gold)}
+  .contact .sub{color:rgba(255,255,255,.85);margin:0 auto}
+  .contact .actions{justify-content:center}
+  .mail{display:block;margin-top:18px;color:rgba(255,255,255,.75);font-size:15px}
+
+  footer{background:var(--blue-ink);color:rgba(255,255,255,.65);font-size:14px;padding:26px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:860px){
+    .grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr;gap:32px}
+    .hero{padding:130px 0 80px}
+    section{padding:70px 0}
+  }
+  @media (max-width:480px){
+    .wrap{padding:0 16px}
+    .nav a.cta-sm{display:none}
+    .btn{width:100%;justify-content:center}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Sentrell Group home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64"><path d="M44 18c-3-3-8-5-13-5-8 0-13 4-13 10 0 13 28 7 28 19 0 6-6 9-13 9-6 0-10-2-14-6" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/></svg>
+      </span>
+      SENTRELL GROUP
+    </a>
+    <a class="cta-sm" href="mailto:info@sentrellgroup.com">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge"><span class="dot"></span>Launching Soon</span>
+      <h1>Your team already has AI.<br><em>We make it mission-ready.</em></h1>
+      <p class="lead">Sentrell Group helps government organizations turn approved AI tools into real results, with hands-on training, clear guardrails, and ongoing support built around how your people actually work.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="mailto:info@sentrellgroup.com?subject=Sentrell%20Group%20Inquiry">Get in Touch &rarr;</a>
+        <a class="btn btn-ghost" href="#services">What We Do</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow">What We Do</div>
+      <h2>From first steps to everyday use</h2>
+      <p class="sub">Practical AI enablement on the platforms your agency has already approved, with no new software to buy and no approvals to wait on.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="num">01</div>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Readiness</h3>
+          <p>Assess where your team stands, then put a clear AI use policy and practical guardrails in place before you scale.</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+          <h3>Training</h3>
+          <p>On-site, hands-on sessions where staff work through their own day-to-day tasks and leave with a playbook they'll actually use.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+          <h3>Sustainment</h3>
+          <p>Ongoing support, new workflows, and policy updates so adoption keeps growing long after training day.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap why-grid">
+      <div>
+        <div class="eyebrow">Why Sentrell</div>
+        <h2>Built for the public sector</h2>
+        <p class="sub">We focus on cities, counties, school districts, state agencies, and federal offices across the region, delivering in person and on your timeline.</p>
+      </div>
+      <ul class="points">
+        <li><div><b>In person, not a webinar</b><span>Training delivered on-site with your team, built around your mission.</span></div></li>
+        <li><div><b>Safe by design</b><span>Policy and guardrails come standard with every engagement.</span></div></li>
+        <li><div><b>Kansas City based</b><span>Serving the Heartland and the region around it.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="eyebrow">Let's Talk</div>
+      <h2>Ready to put AI to work?</h2>
+      <p class="sub">We're preparing for launch and are now scheduling early conversations. Reach out and we'll be in touch.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="mailto:info@sentrellgroup.com?subject=Sentrell%20Group%20Inquiry">Email Us &rarr;</a>
+      </div>
+      <a class="mail" href="mailto:info@sentrellgroup.com">info@sentrellgroup.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Sentrell Group. All rights reserved.</span>
+    <span>Kansas City</span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
