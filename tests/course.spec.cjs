@@ -15,8 +15,8 @@ test('guided prompt builder works for both supported assistants', async ({page})
   await page.getByRole('button', {name:/build a prompt/i}).click();
   await page.locator('#goal').fill('Draft a clear invoice follow-up');
   await expect(page.locator('#prompt-output')).toContainText('Draft a clear invoice follow-up');
-  await expect(page.getByRole('link', {name:/try copilot/i})).toHaveAttribute('href', 'https://m365.cloud.microsoft/chat');
-  await expect(page.getByRole('link', {name:/try chatgpt/i})).toHaveAttribute('href','https://chatgpt.com/');
+  await expect(page.getByRole('link', {name:/open microsoft 365 copilot/i})).toHaveAttribute('href', 'https://m365.cloud.microsoft/chat');
+  await expect(page.getByRole('link', {name:/open chatgpt/i})).toHaveAttribute('href','https://chatgpt.com/');
 });
 test('learner detects false commitments and preserved restrictions', async ({page}) => {
   await page.goto(URL);
