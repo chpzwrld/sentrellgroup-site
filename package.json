@@ -1,0 +1,13 @@
+{
+  "name": "sentrell-small-business-training",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser QA for Sentrell digital course preview",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright test --reporter=list"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
+}
