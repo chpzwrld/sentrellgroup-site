@@ -61,3 +61,16 @@ test('evidence and privacy statements are transparent', async ({page}) => {
   await page.getByRole('link',{name:/host a live workshop/i}).click();
   await expect(page.getByRole('heading',{name:/complete workshop your audience/i})).toBeVisible();
 });
+
+
+test('capture desktop and mobile visual review images', async ({page}) => {
+  await page.setViewportSize({width:1440,height:900});
+  await page.goto(URL);
+  await expect(page.locator('.hero')).toBeVisible();
+  await page.screenshot({path:'test-results/desktop-full.png',fullPage:true,animations:'disabled'});
+  await page.setViewportSize({width:390,height:844});
+  await page.reload();
+  await page.screenshot({path:'test-results/mobile-full.png',fullPage:true,animations:'disabled'});
+  const excess = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(excess).toBeLessThanOrEqual(1);
+});
