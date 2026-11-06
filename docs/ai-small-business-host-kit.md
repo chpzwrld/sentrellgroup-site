@@ -53,7 +53,7 @@ A learner passes the workshop when they can independently:
 - Attendee data stays with the attendee unless they separately consent to anonymous aggregate reporting.
 
 ## Host acquisition / discovery
-Use the **Request a discovery call** action on the public course page. Until a dedicated Microsoft Bookings or Calendly URL is supplied, it opens a prefilled message to info@sentrellgroup.com asking for organization, group size and proposed meeting windows. **It is not an instant calendar booking.**
+Use the **Schedule a discovery call** action on the public course page. Both conversion links open the supplied Calendly scheduling page, https://calendly.com/chip-sentrellgroup, in a new tab. Appointment options are determined by the event types and live availability configured in Calendly. Verify that a visitor can select and confirm a meeting before inviting event organizers. If no times display, contact info@sentrellgroup.com.
 
 ## Scope boundaries
 - This preview is not a self-paced 90-minute replacement. It demonstrates 10–12 minutes of the 90-minute instructor-led product.
