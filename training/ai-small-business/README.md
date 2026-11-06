@@ -5,7 +5,7 @@ A static, responsive digital course preview for **AI for Small Business: Win Bac
 **Primary audience:** Kansas City small-business owners and local event hosts.  
 **Instruction:** Introductory, vendor-neutral, with practical Copilot and ChatGPT examples.  
 **Product:** ~12-minute interactive preview plus a 90-minute live instructor-led workshop.  
-**Buyer CTA:** Request a discovery call (prefilled email; not instant scheduling).
+**Buyer CTA:** Schedule a discovery call via https://calendly.com/chip-sentrellgroup (opens Calendly in another tab).
 
 ## Preview modules
 1. Your mission
