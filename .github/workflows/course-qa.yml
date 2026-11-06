@@ -1,0 +1,36 @@
+name: Digital Course Browser QA
+on:
+  pull_request:
+    paths:
+      - "training/ai-small-business/**"
+      - "tests/**"
+      - "playwright.config.cjs"
+      - "package.json"
+      - ".github/workflows/course-qa.yml"
+  workflow_dispatch:
+jobs:
+  verify-course:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependencies
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser checks
+        run: npm run test:e2e
+      - name: Upload verification artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentrell-course-browser-qa
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
