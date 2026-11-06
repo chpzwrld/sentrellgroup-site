@@ -7,7 +7,7 @@ The proposed course lives at `training/ai-small-business/index.html` on the feat
 - Buyer: Kansas City small-business owners and local event organizers
 - Offering: Interactive ~12-minute preview **plus** a separate 90-minute live instructor-led workshop
 - Apps taught: Vendor-neutral prompts, demonstrated with Copilot and ChatGPT links
-- Primary CTA: Discovery call request via email; swap for verified scheduling URL once supplied
+- Primary CTA: Schedule a discovery call via https://calendly.com/chip-sentrellgroup (user-supplied booking URL).
 - Privacy: Browser-only interactive fields; no AI API, account collection, payments, analytics or local persistent storage
 
 ## Browser smoke tests
@@ -28,17 +28,17 @@ If the CI run fails, repair and rerun before public release. The site must not b
 4. GitHub Pages previously ran from `main`, with CNAME `sentrellgroup.com`; confirm Pages build/deployment succeeds after merge.
 5. Open `https://sentrellgroup.com/training/ai-small-business/` from desktop and phone.
 6. Click all six lessons and both assistant links. Send a *test request only* via the email CTA to confirm configured mail handling.
-7. Provide a verified self-scheduling URL when available, then replace mailto CTA and repeat testing.
+7. Click both discovery-call links and verify Calendly presents the intended discovery event and a usable appointment time. Do not submit a booking as a test unless desired.
 
 ## Future enhancement backlog (not required for pilot)
-- Microsoft Bookings or another verified calendar booking URL
+- Verify which Calendly event type should be the default if multiple types are offered by the supplied profile URL.
 - Accessible captions and founder-led Loom video once produced/approved
 - Live event registration through a consented event-host platform
 - Permissioned, optional post-event results capture and reporting dashboard
 - Matched before/after pilot outcomes before any numerical performance claim
 
 ## Known limitations
-- Visitors cannot schedule a definite time in-page: they initiate an email request.
+- Scheduling occurs on Calendly, not within the Sentrell website; availability and confirmations are controlled by the Calendly account.
 - Browser fields are not submitted or stored; leaving the page resets entries.
 - The preview does not automatically call Copilot, ChatGPT or an AI model; actual model practice occurs in an approved separate application.
 - GitHub Pages deployment depends on repository configuration and successful post-merge publishing.
