@@ -6,7 +6,8 @@ test('visitor can read offer and reach discovery-call action', async ({page}) =>
   page.on('pageerror', err => pageErrors.push(err.message));
   await page.goto(URL);
   await expect(page.getByRole('heading', {name: /get five hours back in your week/i})).toBeVisible();
-  await expect(page.getByRole('link', {name: /request a discovery call/i}).first()).toHaveAttribute('href', /mailto:info@sentrellgroup.com\?subject=.*Discovery/);
+  await expect(page.getByRole('link', {name: /schedule a discovery call/i}).first()).toHaveAttribute('href', 'https://calendly.com/chip-sentrellgroup');
+  await expect(page.getByRole('link', {name: /schedule a discovery call/i}).last()).toHaveAttribute('target', '_blank');
   await expect(page.getByRole('heading', {name:/experience the lesson/i})).toBeVisible();
   expect(pageErrors).toEqual([]);
 });
